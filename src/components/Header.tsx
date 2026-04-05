@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { ButtonLink } from "@/components/ui/button-link";
 import { Phone, Menu, X } from "lucide-react";
+import { Logo } from "@/components/Logo";
 
 const WHATSAPP = "5551982829390";
 const WHATSAPP_MSG = "Olá! Gostaria de solicitar um orçamento.";
@@ -31,21 +32,15 @@ export function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-zinc-900/95 backdrop-blur-sm shadow-lg shadow-black/20"
+          ? "bg-navy-900/95 backdrop-blur-sm shadow-lg shadow-black/30"
           : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2 group">
-            <div className="w-9 h-9 bg-orange-500 rounded flex items-center justify-center font-black text-white text-lg group-hover:bg-orange-400 transition-colors">
-              L
-            </div>
-            <div className="leading-tight">
-              <span className="block text-white font-bold text-sm tracking-wide">LUKANN</span>
-              <span className="block text-orange-400 text-[10px] tracking-widest uppercase">Serralheria</span>
-            </div>
+          <a href="#" aria-label="Serralheria LUKANN — início">
+            <Logo size="sm" />
           </a>
 
           {/* Nav Desktop */}
@@ -54,7 +49,7 @@ export function Header() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-zinc-300 hover:text-orange-400 text-sm font-medium transition-colors"
+                className="text-navy-100 hover:text-white text-sm font-medium transition-colors"
               >
                 {link.label}
               </a>
@@ -65,7 +60,7 @@ export function Header() {
           <div className="hidden lg:flex items-center gap-3">
             <a
               href="tel:+5551982829390"
-              className="flex items-center gap-2 text-zinc-300 hover:text-white text-sm transition-colors"
+              className="flex items-center gap-2 text-navy-200 hover:text-white text-sm transition-colors"
             >
               <Phone size={14} />
               (51) 98282-9390
@@ -83,9 +78,9 @@ export function Header() {
 
           {/* Menu Mobile */}
           <button
-            className="lg:hidden text-white p-2"
+            className="lg:hidden text-white p-2 min-h-[44px] min-w-[44px] flex items-center justify-center"
             onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Menu"
+            aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
           >
             {menuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -93,13 +88,13 @@ export function Header() {
 
         {/* Mobile Menu */}
         {menuOpen && (
-          <div className="lg:hidden bg-zinc-900 border-t border-zinc-800 pb-4">
+          <div className="lg:hidden bg-navy-900 border-t border-navy-700 pb-4">
             <nav className="flex flex-col gap-1 pt-2">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-zinc-300 hover:text-orange-400 px-4 py-3 text-sm font-medium transition-colors"
+                  className="text-navy-100 hover:text-white px-4 py-3 text-sm font-medium transition-colors min-h-[44px] flex items-center"
                   onClick={() => setMenuOpen(false)}
                 >
                   {link.label}
@@ -108,7 +103,7 @@ export function Header() {
               <div className="px-4 pt-3 flex flex-col gap-2">
                 <a
                   href="tel:+5551982829390"
-                  className="flex items-center gap-2 text-zinc-300 text-sm"
+                  className="flex items-center gap-2 text-navy-200 text-sm min-h-[44px]"
                 >
                   <Phone size={14} />
                   (51) 98282-9390

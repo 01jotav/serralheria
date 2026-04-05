@@ -1,4 +1,5 @@
 import { Separator } from "@/components/ui/separator";
+import { Logo } from "@/components/Logo";
 
 const links = [
   { label: "Serviços", href: "#servicos" },
@@ -10,21 +11,13 @@ const links = [
 
 export function Footer() {
   return (
-    <footer className="bg-zinc-950 border-t border-zinc-900 pb-safe">
+    <footer className="bg-navy-950 border-t border-navy-800 pb-safe">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid md:grid-cols-3 gap-10 mb-10">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 bg-orange-500 rounded flex items-center justify-center font-black text-white text-lg">
-                L
-              </div>
-              <div className="leading-tight">
-                <span className="block text-white font-bold text-sm tracking-wide">LUKANN</span>
-                <span className="block text-orange-400 text-[10px] tracking-widest uppercase">Serralheria</span>
-              </div>
-            </div>
-            <p className="text-zinc-500 text-sm leading-relaxed">
+            <Logo size="md" className="mb-4" />
+            <p className="text-navy-400 text-sm leading-relaxed mt-3">
               Qualidade e precisão em trabalhos com ferro e aço. Atendemos Porto
               Alegre e região metropolitana há mais de 15 anos.
             </p>
@@ -40,7 +33,7 @@ export function Footer() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-zinc-500 hover:text-orange-400 text-sm transition-colors"
+                    className="text-navy-400 hover:text-orange-400 text-sm transition-colors"
                   >
                     {link.label}
                   </a>
@@ -54,7 +47,7 @@ export function Footer() {
             <h4 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">
               Contato
             </h4>
-            <div className="space-y-2 text-sm text-zinc-500">
+            <div className="space-y-2 text-sm text-navy-400">
               <p>
                 <a
                   href="https://wa.me/5551982829390"
@@ -71,9 +64,9 @@ export function Footer() {
           </div>
         </div>
 
-        <Separator className="bg-zinc-900 mb-6" />
+        <Separator className="bg-navy-800 mb-6" />
 
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-zinc-600 text-sm">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-navy-500 text-sm">
           <p>© {new Date().getFullYear()} Serralheria LUKANN. Todos os direitos reservados.</p>
           <p>Porto Alegre, RS — Brasil</p>
         </div>
