@@ -1,20 +1,20 @@
 import { MessageCircle, Phone, MapPin, Clock } from "lucide-react";
 import { ButtonLink } from "@/components/ui/button-link";
 
-const WHATSAPP = "5551982829390";
+const WHATSAPP = "555198282939";
 const WHATSAPP_MSG = "Olá! Gostaria de solicitar um orçamento.";
 
 const infos = [
   {
     icone: MessageCircle,
     titulo: "WhatsApp",
-    valor: "(51) 98282-9390",
+    valor: "(51) 9828-2939",
     link: `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(WHATSAPP_MSG)}`,
   },
   {
     icone: Phone,
     titulo: "Telefone",
-    valor: "(51) 98282-9390",
+    valor: "(51) 9828-2939",
     link: "tel:+5551982829390",
   },
   {

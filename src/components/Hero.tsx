@@ -2,7 +2,7 @@ import { ButtonLink } from "@/components/ui/button-link";
 import { ArrowRight, CheckCircle, MessageCircle } from "lucide-react";
 import { Logo } from "@/components/Logo";
 
-const WHATSAPP = "5551982829390";
+const WHATSAPP = "555198282939";
 const WHATSAPP_MSG = "Olá! Gostaria de solicitar um orçamento gratuito.";
 
 export function Hero() {
